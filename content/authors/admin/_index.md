@@ -79,7 +79,7 @@ I am a student focused in the ecology of marine microbes in the Institut de Ciè
 
 I care deeply about open access science and the need of code literacy in the scientific world in general. A paper is the advertisment of the data and analyses behind, nothing else! 
 
-Data viz addict ~~ 
+~Data viz addict~
 
 When I am not science doing, I am probably either worrying about climate change or climbing mountains. 
 
