@@ -25,15 +25,15 @@ interests:
 # Education to show in About widget
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
+  - course: PhD student in Microbiology
+    institution: Institut Ciències del Mar
+    year: ongoing
+  - course: MSc in Bioinformatics for the Health Sciences 
+    institution: Universitat Pompeu Fabra
+    year: 2016
+  - course: BSc in Microbiology
+    institution: Universitat Autònoma de Barcelona
+    year: 2014
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -45,13 +45,13 @@ social:
   link: '/#contact'
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
+  link: https://twitter.com/AdriAuladell
 - icon: graduation-cap  # OR `google-scholar`
   icon_pack: fas  # OR `ai`
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://scholar.google.es/citations?user=9FJZMbYAAAAJ&hl=ca
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/adriaaula
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/
@@ -72,8 +72,12 @@ user_groups:
 - Principal Investigators
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+I am a student focused in the ecology of marine microbes in the Institut de Ciències Marines (ICM-CSIC). My thesis is focused in understanding the ecology of the whole community on a temporal basis through studying the seasonal patterns in the [Blanes Bay Microbial Observatory](http://webold.icm.csic.es/bio/projects/icmicrobis/bbmo/). I work both from amplicon and metagenomic datasets. 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+I care deeply about open access science and the need of code literacy in the scientific world in general. A paper is the advertisment of the data and analyses behind, nothing else! 
+
+Data viz addict ~~ 
+
+When I am not science doing, I am probably either worrying about climate change or climbing mountains. 
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.

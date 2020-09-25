@@ -27,10 +27,10 @@ subtitle = ""
   description = "100%"  
   
 [[feature]]
-  icon = "camera-retro"
+  icon = "mountain"
   icon_pack = "fas"
-  name = "Photography"
-  description = "10%"
+  name = "Climbing"
+  description = "90%"
 
 # Uncomment to use emoji icons.
 # [[feature]]
