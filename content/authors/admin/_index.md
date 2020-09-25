@@ -68,8 +68,11 @@ email: ""
 
 # Organizational groups that you belong to (for People widget)
 #   Remove this if you are not using the People widget.
-user_groups:
-- Principal Investigators
+#user_groups:
+#- Principal Investigators
+
+#button for downloading the CV
+#{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
 ---
 
 I am a student focused in the ecology of marine microbes in the Institut de Ciències Marines (ICM-CSIC). My thesis is focused in understanding the ecology of the whole community on a temporal basis through studying the seasonal patterns in the [Blanes Bay Microbial Observatory](http://webold.icm.csic.es/bio/projects/icmicrobis/bbmo/). I work both from amplicon and metagenomic datasets. 
@@ -80,4 +83,3 @@ Data viz addict ~~
 
 When I am not science doing, I am probably either worrying about climate change or climbing mountains. 
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
