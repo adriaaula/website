@@ -75,11 +75,10 @@ email: ""
 #{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
 ---
 
-I am a student focused in the ecology of marine microbes in the Institut de Ciències Marines (ICM-CSIC). My thesis is focused in understanding the ecology of the whole community on a temporal basis through studying the seasonal patterns in the [Blanes Bay Microbial Observatory](http://webold.icm.csic.es/bio/projects/icmicrobis/bbmo/). I work both from amplicon and metagenomic datasets. 
+I am a student with interest in the ecology of marine microbes at the Institut de Ciències Marines (ICM-CSIC; Barcelona). My thesis is focused in understanding the ecology of microbial communities on a temporal basis through studying their seasonal patterns in the [Blanes Bay Microbial Observatory](http://webold.icm.csic.es/bio/projects/icmicrobis/bbmo/). I work both with amplicon and metagenomic datasets. 
 
-I care deeply about open access science and the need of code literacy in the scientific world in general. A paper is the advertisment of the data and analyses behind, nothing else! 
+I care deeply about open access science and the need of code literacy in the scientific world in general. A paper is the advertisement of the data and analyses behind, nothing else. 
 
-~Data viz addict~
 
-When I am not science doing, I am probably either worrying about climate change or climbing mountains. 
+When I am not science-doing, I am probably either worrying about climate change or climbing mountains. 
 
