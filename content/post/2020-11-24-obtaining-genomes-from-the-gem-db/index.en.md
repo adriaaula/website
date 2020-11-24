@@ -19,7 +19,7 @@ image:
 projects: []
 ---
 
-Last month a new shiny database was born for the joy and desesperation of all the microbiologists interested in the genomics of MAGs. The Genomic catalog of Earth Microbiomes (GEM db) is one of the most comprehensive datasets right now regarding the diversity of bacteria and archaea. The GEMdb expanded the known phylogenetic diversity of bacteria and archaea by 44% and it is available for all kind of analyses. Since I was interested in solely my subject of study, here I will show how I downloaded all the MAGs i was interested.
+Last month a new shiny database was born for the joy and desesperation of all the microbiologists interested in MAGs. The Genomic catalog of Earth Microbiomes (GEM db) is one of the most comprehensive datasets right now regarding the diversity of bacteria and archaea. The GEMdb expanded the known phylogenetic diversity of bacteria and archaea by 44% and it is available for all kind of analyses. Since I was interested in solely my subject of study, here I will show how I downloaded all the MAGs i was interested.
 
 First of all, by going to the [paper data availability](https://www.nature.com/articles/s41587-020-0718-6#data-availability) we see that there are various options for downloading.
 
