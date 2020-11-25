@@ -23,9 +23,7 @@ Last month a new shiny database was born for the joy and desperation of all the 
 
 Here I will do an explanation of the process, but to download it without problems see the  [github repository](https://github.com/adriaaula/download_GEMdb) (see the last section to understand why :)
 
-First of all, by going to the [paper data availability](https://www.nature.com/articles/s41587-020-0718-6#data-availability) we see that there are several options for downloading.
-
-By going to the [NERSC portal](https://portal.nersc.gov/GEM) and clicking to genomes, we observe several files:
+First of all, by going to the [paper data availability](https://www.nature.com/articles/s41587-020-0718-6#data-availability) we see that there are several options for downloading.We will choose the NERSC portal. By going to the [portal](https://portal.nersc.gov/GEM) and clicking to genomes, we observe several files:
 
 ![nserc\_dir](./nserc_dir.png)
 
@@ -36,7 +34,7 @@ We will retrieve the `genome_metadata.tsv`. If you click with the right in the m
     cd gem_db_subset/
     wget  https://portal.nersc.gov/GEM/genomes/genome_metadata.tsv
 
-To check the file I used Wei Shen [csvtk](https://github.com/shenwei356/csvtk). It is a useful command-line tool to work both with csv and tsv. Yup, it is yet *another* tool to do things, maybe unnecessary. But I think it makes way easier some processes. Sorry not sorry ;^)
+To check easily the structure of the data I used Wei Shen [csvtk](https://github.com/shenwei356/csvtk). It is a useful command-line tool to work both with csv and tsv. Yup, it is yet *another* tool to do things, maybe unnecessary. But I think it makes way easier some processes. Sorry not sorry ;^)
 
     # We discover the headers for each column
     csvtk headers -t genome_metadata.tsv
@@ -78,10 +76,11 @@ We therefore iterate through a loop and get each of the sequences separately.
     done;
 
 
-
 And voilà!
 
 I hope you find it useful :)
+
+PS: If you are really lucky everything would have worked. But as we know this *almost* never happens. See below! 
 
 
 ## Trouble Trouble Trouble! 
