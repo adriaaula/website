@@ -21,7 +21,7 @@ projects: []
 
 Last month a new shiny database was born for the joy and desperation of all the microbiologists interested in MAGs. The Genomic catalog of Earth Microbiomes (GEM db) is one of the most comprehensive datasets right now regarding the diversity of bacteria and archaea. The GEMdb expanded the known phylogenetic diversity of bacteria and archaea by 44% and it is available for all kind of analyses. Since I was interested in solely my subject of study, here I will show how I downloaded all the MAGs i was interested.
 
-Here I will do an extended explanation, if you are an experienced user you can jump directly to the [github repository](https://github.com/adriaaula/download_GEMdb) with the scripts :^) 
+Here I will do an explanation of the process, but to download it without problems see the  [github repository](https://github.com/adriaaula/download_GEMdb) (see the last section to understand why :)
 
 First of all, by going to the [paper data availability](https://www.nature.com/articles/s41587-020-0718-6#data-availability) we see that there are several options for downloading.
 
@@ -81,13 +81,13 @@ We therefore iterate through a loop and get each of the sequences separately.
 
 And voilà!
 
-A new dataset to play with.
-
 I hope you find it useful :)
+
 
 ## Trouble Trouble Trouble! 
 
-1. By working in this I found that there are duplicates in the `genome_metadata.tsv`! Which is a nice thing to discover since maybe the creators will solve it! To solve the problem in our side I included a line that erases these duplicates using sort. The amount of rows went from ~10.000 to ~6.000. Great :) 
+
+1. By working in this I found that there are duplicates in the `genome_metadata.tsv`! Which is a nice thing to discover since maybe the creators will solve it! To solve the problem in our side I included [a pipe step](https://github.com/adriaaula/download_GEMdb/blob/4ad3af0ac3bc712a7d045e36fc0333d9ea962d5b/parsing_genomes.sh#L15) that erases these duplicates using sort. The amount of rows went from ~10.000 to ~6.000. Great :) 
 
 2. But surprise! Additionally to the duplicates we found initially there other pervasive duplicates. Some of the duplicates present some column values changed, and therefore the `sort` doesn't delete them. Let's see an example: 
 
@@ -98,8 +98,8 @@ I hope you find it useful :)
 
 These values only changed by the `-` sign in the LAT. Small things that create duplicates :) 
 
-To filter out these problems we can perform again a sort before performing the loop. See here. 
+To filter out these problems we can perform again a [sort](https://github.com/adriaaula/download_GEMdb/blob/4ad3af0ac3bc712a7d045e36fc0333d9ea962d5b/parsing_genomes.sh#L23) before performing the loop. 
 
-3. Finally, by downloading many many files sometimes there is a problem in the connection, or a random error in the process, making that some files are lost. To check that everything is correct and that we have all the values we are interested, we can do a last check to redownload any genome not present in our directories. See [redownloading script](https://github.com/adriaaula/download_GEMdb/blob/main/redownloading_faulty_genomes.sh).  
+3. Finally, by downloading many many files sometimes there is a problem in the connection, or a random error in the process, making that some files are lost. To check that everything is correct and that we have all the values we are interested, we can do a last check to re-download any genome not present in our directories. See [redownloading script](https://github.com/adriaaula/download_GEMdb/blob/main/redownloading_faulty_genomes.sh).  
 
 
