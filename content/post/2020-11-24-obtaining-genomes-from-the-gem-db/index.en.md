@@ -19,11 +19,13 @@ image:
 projects: []
 ---
 
-Last month a new shiny database was born for the joy and desesperation of all the microbiologists interested in MAGs. The Genomic catalog of Earth Microbiomes (GEM db) is one of the most comprehensive datasets right now regarding the diversity of bacteria and archaea. The GEMdb expanded the known phylogenetic diversity of bacteria and archaea by 44% and it is available for all kind of analyses. Since I was interested in solely my subject of study, here I will show how I downloaded all the MAGs i was interested.
+Last month a new shiny database was born for the joy and desperation of all the microbiologists interested in MAGs. The Genomic catalog of Earth Microbiomes (GEM db) is one of the most comprehensive datasets right now regarding the diversity of bacteria and archaea. The GEMdb expanded the known phylogenetic diversity of bacteria and archaea by 44% and it is available for all kind of analyses. Since I was interested in solely my subject of study, here I will show how I downloaded all the MAGs i was interested.
 
-First of all, by going to the [paper data availability](https://www.nature.com/articles/s41587-020-0718-6#data-availability) we see that there are various options for downloading.
+Here I will do an extended explanation, if you are an experienced user you can jump directly to the [github repository](https://github.com/adriaaula/download_GEMdb) with the scripts :^) 
 
-By going to the NERSC portal and clicking to genomes, we observe various files:
+First of all, by going to the [paper data availability](https://www.nature.com/articles/s41587-020-0718-6#data-availability) we see that there are several options for downloading.
+
+By going to the [NERSC portal](https://portal.nersc.gov/GEM) and clicking to genomes, we observe several files:
 
 ![nserc\_dir](./nserc_dir.png)
 
@@ -48,7 +50,7 @@ We are specifically interested in **high quality genomes** coming from a **marin
 
 Having a clear picture, we just have to filter all the results to keep only the genomes of interest. Get out, soil people.
 
-    csvtk filter -f "completeness>=70" -t genome_metadata.tsv | csvtk grep -t  -p Marine -f ecosystem_type > marine_mags_gemdb.tsv
+    csvtk filter -f "completeness>=70" -t genome_metadata.tsv | csvtk grep -t  -p Marine -f ecosystem_type | csvtk uniq > marine_mags_gemdb.tsv
 
 And now we want to retrieve each of the genome files in the db. Each genome is stored with:
 
@@ -98,6 +100,6 @@ These values only changed by the `-` sign in the LAT. Small things that create d
 
 To filter out these problems we can perform again a sort before performing the loop. See here. 
 
-3. Finally, by downloading many many files sometimes there is a problem in the connection, or a random error in the process, making that some files are lost. To check that everything is correct and that we have all the values we are interested, we can do a last check to redownload any genome not present in our directories. See redownloading script. 
+3. Finally, by downloading many many files sometimes there is a problem in the connection, or a random error in the process, making that some files are lost. To check that everything is correct and that we have all the values we are interested, we can do a last check to redownload any genome not present in our directories. See [redownloading script](https://github.com/adriaaula/download_GEMdb/blob/main/redownloading_faulty_genomes.sh).  
 
 
