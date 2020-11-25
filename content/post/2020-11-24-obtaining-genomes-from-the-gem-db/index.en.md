@@ -62,24 +62,42 @@ We could download all the genomes and then filter out the ones we are interested
 
 We therefore iterate through a loop and get each of the sequences separately.
 
-    for genome_name in $(cut -f1,1 marine_mags_gemdb.tsv );
-    do
-        wget https://portal.nersc.gov/GEM/genomes/faa/${genome_name}.faa.gz;
-        wget https://portal.nersc.gov/GEM/genomes/fna/${genome_name}.fna.gz;
-        wget https://portal.nersc.gov/GEM/genomes/ffn/${genome_name}.ffn.gz;
-
-    done;
 
     mkdir faa
     mkdir fna
     mkdir ffn
+    
+    for genome_name in $(cut -f1,1 marine_mags_gemdb.tsv );
+    do
+        wget -P faa/ https://portal.nersc.gov/GEM/genomes/faa/${genome_name}.faa.gz;
+        wget -P fna/ https://portal.nersc.gov/GEM/genomes/fna/${genome_name}.fna.gz;
+        wget -P ffn/ https://portal.nersc.gov/GEM/genomes/ffn/${genome_name}.ffn.gz;
 
-    mv *.faa.gz faa/.
-    mv *.fna.gz fna/.
-    mv *.ffn.gz ffn/.
+    done;
+
+
 
 And voilà!
 
 A new dataset to play with.
 
 I hope you find it useful :)
+
+## Trouble Trouble Trouble! 
+
+1. By working in this I found that there are duplicates in the `genome_metadata.tsv`! Which is a nice thing to discover since maybe the creators will solve it! To solve the problem in our side I included a line that erases these duplicates using sort. The amount of rows went from ~10.000 to ~6.000. Great :) 
+
+2. But surprise! Additionally to the duplicates we found initially there other pervasive duplicates. Some of the duplicates present some column values changed, and therefore the `sort` doesn't delete them. Let's see an example: 
+
+```
+3300025281_5	3300025281	2837964	108	41511	0	1	1	36	94.88	1.32	88.28	MQ	OTU-4815	d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Pseudomonadales;f__Pseudohongiellaceae;g__UBA5109;s__GCA_002414385.1	Environmental	Aquatic	Marine	Deep ocean	163.4956	9.2013
+3300025281_5	3300025281	2837964	108	41511	0	1	1	36	94.88	1.32	88.28	MQ	OTU-4815	d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Pseudomonadales;f__Pseudohongiellaceae;g__UBA5109;s__GCA_002414385.1	Environmental	Aquatic	Marine	Deep ocean	-163.4956	9.2013
+```
+
+These values only changed by the `-` sign in the LAT. Small things that create duplicates :) 
+
+To filter out these problems we can perform again a sort before performing the loop. See here. 
+
+3. Finally, by downloading many many files sometimes there is a problem in the connection, or a random error in the process, making that some files are lost. To check that everything is correct and that we have all the values we are interested, we can do a last check to redownload any genome not present in our directories. See redownloading script. 
+
+
