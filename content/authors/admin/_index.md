@@ -25,9 +25,6 @@ interests:
 # Education to show in About widget
 education:
   courses:
-  - course: Postdoc
-    institution: Institut Biologia Evolutiva
-    year: 2023
   - course: PhD in Microbiology
     institution: Institut Ciències del Mar
     year: 2022
@@ -46,9 +43,6 @@ social:
 - icon: envelope
   icon_pack: fas
   link: '/#contact'
-- icon: bluesky
-  icon_pack: fab
-  link: adriaula
 - icon: graduation-cap  # OR `google-scholar`
   icon_pack: fas  # OR `ai`
   link: https://scholar.google.es/citations?user=9FJZMbYAAAAJ&hl=ca
